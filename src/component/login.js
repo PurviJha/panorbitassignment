@@ -19,6 +19,11 @@ export default function Login() {
                 console.log(error);
             })
     }, [])
+    const onClickCards = (data) => {
+        console.log("called")
+        history.push({pathname:'./lay/profile'});
+        window.userInfo = data
+    }
     return (
         <div styl={{
             overflow: 'auto',
@@ -63,10 +68,7 @@ export default function Login() {
                 <div>
                     {data.map((n, i) => {
                         return (
-                            <div onClick={()=>history.push({
-                                pathname:'./lay/profile',
-                                state: { data:n }
-                            })}>
+                            <div onClick={()=>onClickCards(n)}>
                                 <ul key={i}>
                                     <div style={{
                                         display: 'flex',
