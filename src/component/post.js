@@ -2,11 +2,13 @@ import React from 'react'
 
 export default function Posts() {
     return (
-        <div style={{ display: "flex" ,}}>
-            <div style={{color:"#eeeeee",fontSize:"1em"}}>
+        <div >
+             <hr />
+            <div style={{color:"#eeeeee",fontSize:"2.5em",margin:"auto",marginTop:"100px"}}>
             <h1>Coming Soon</h1>
 
             </div>
         </div>
     )
 }
+
