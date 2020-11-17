@@ -5,10 +5,9 @@ import { Route, Switch } from "react-router-dom";
 import routes from './routes'
 
 export default function Layout(props) {
-
     const [data,setData]=useState([])
     useEffect(() => {
-        setData( props.location.state.data  ) 
+        setData( window.userInfo  ) 
     }, [])
     const getRoutes = routes => {
         return routes.map((prop, key) => {
@@ -40,7 +39,7 @@ export default function Layout(props) {
                     marginLeft: "45px",
                     minWidth: "75%",
                 }}>
-                    <Navbar data={data} brand="Profile"/>
+                    <Navbar data={data} brand={"profile"} />
                     <div style={{
                         overflow: 'auto',
                         maxHeight: "100vh",
